@@ -40,3 +40,12 @@ height: 40px;
 border: 1px solid black;
 background-color: white;
 }
+
+#clear-board {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    text-align: center;
+    
+}
