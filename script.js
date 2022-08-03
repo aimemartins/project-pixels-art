@@ -4,10 +4,8 @@ window.onload = function () {
     const firstColor = document.getElementById('black');
     firstColor.classList.add('selected');
   }
-
   onloadColor();
-
-  // Criar selected
+  // Requisito 7
   function captureColor(event) {
     const clickColor = event.target;
     const colorCapture = document.querySelector('.selected');
@@ -16,4 +14,14 @@ window.onload = function () {
   }
   const changeColor = document.getElementById('color-palette');
   changeColor.addEventListener('click', captureColor);
+
+  // Requisito 8
+  function paintPixels(event2) {
+    const corClicada = event2.target;
+    const colorCapture = document.querySelector('.selected');
+    const cor = getComputedStyle(colorCapture).backgroundColor;
+    corClicada.style.backgroundColor = cor;
+  }
+  const colorPixels = document.getElementById('pixel-board');
+  colorPixels.addEventListener('click', paintPixels);
 };
