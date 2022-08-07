@@ -32,10 +32,61 @@ window.onload = function () {
   // Requisito 9
   function clearPixels() {
     const colorPixels = document.getElementsByClassName('pixel');
-   for (let i = 0; i < colorPixels.length; i +=1 ) {
-    colorPixels[i].style.backgroundColor = 'white'
-   }
+    for (let i = 0; i < colorPixels.length; i += 1) {
+      colorPixels[i].style.backgroundColor = 'white'
+    }
   }
   const button = document.getElementById('clear-board'); //(1)
   button.addEventListener('click', clearPixels); //(2)
+
+
+
+  const input = document.getElementById('board-size');
+  const pixel1 = document.getElementsByClassName('pixel');
+
+  function changeSize() {
+    for (let index = 0; index < pixel1.length; index += 1) {
+      const larguraPixelBoard = input * pixel1[index];
+      if (input > 0) {
+        pixel1[index].style.width = input;
+        pixel1[index].style.height = input;
+      } else {
+        alert('Board inválido!')
+      }
+    }
+  }
+  const buttonChangeSize = document.getElementById('generate-board');
+  buttonChangeSize.addEventListener('click', changeSize);
+
+  // --------------------------Requisito 12 ---------
+  // Requisito pesquisado no site https://www.horadecodar.com.br/2022/01/16/gerar-cor-aleatoria-com-javascript/
+  function randomColor1() {
+    const lett = '0123456789ABCDEF';
+    let color = '#';
+    const optionColor1 = document.getElementById('optionColor1');
+    for (let i = 0; i < 6; i++) {
+      color += lett[Math.floor(Math.random() * 16)];
+    } optionColor1.style.backgroundColor = color;
+  }
+  randomColor1();
+
+  function randomColor2() {
+    const lett = '0123456789ABCDEF';
+    let color = '#';
+    const optionColor2 = document.getElementById('optionColor2');
+    for (let i = 0; i < 6; i++) {
+      color += lett[Math.floor(Math.random() * 16)];
+    } optionColor2.style.backgroundColor = color;
+  }
+  randomColor2();
+
+  function randomColor3() {
+    const lett = '0123456789ABCDEF';
+    let color = '#';
+    const optionColor3 = document.getElementById('optionColor3');
+    for (let i = 0; i < 6; i++) {
+      color += lett[Math.floor(Math.random() * 16)];
+    } optionColor3.style.backgroundColor = color;
+  }
+  randomColor3();
 };

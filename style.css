@@ -1,3 +1,6 @@
+body{
+    background-color: rgba(143, 188, 143, 0.548);
+}
 #title {
     text-align: center;
 }
@@ -20,15 +23,15 @@
     background-color: black;
 }
 
-#red {
+#optionColor1 {
     background-color: red;
 }
 
-#green {
+#optionColor2 {
     background-color: green;
 }
 
-#blue {
+#optionColor3 {
     background-color: blue;
 }
 
@@ -57,5 +60,10 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
+    text-align: center;
+}
+#container-novo-tamanho {
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
 }
